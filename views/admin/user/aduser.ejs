@@ -1,0 +1,195 @@
+<%- include('../../../layouts/admin/header') %>
+    <%- include('../../../layouts/admin/topbar') %>
+        <div class="container-fluid page-body-wrapper">
+            <%- include('../../../layouts/admin/sidenavbar') %>
+                <div class="main-panel">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Add User</h4>
+                                <form class="form-sample">
+                                    <h3 class="card-description"> Personal info </h3>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">First Name</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Last Name</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Gender</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control">
+                                                        <option>Male</option>
+                                                        <option>Female</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Date of Birth</label>
+                                                <div class="col-sm-9">
+                                                    <input class="form-control"type="Date" placeholder="dd/mm/yyyy" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Mobile</label>
+                                                <div class="col-sm-9">
+                                                    <input class="form-control" type="number" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Email</label>
+                                                <div class="col-sm-9">
+                                                    <input class="form-control" type="email" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Scheme</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control">
+                                                        <option>Category1</option>
+                                                        <option>Category2</option>
+                                                        
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <h3 class="card-description"> Address </h3>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Address 1</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">State</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Address 2</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Postcode</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">City</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Country</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control">
+                                                        <option>America</option>
+                                                        <option>Italy</option>
+                                                        <option>Russia</option>
+                                                        <option>Britain</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h3 class="card-description"> Company Details </h3>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Gst</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Pan</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Addhar</label>
+                                                <div class="col-sm-9">
+                                                    <input type="number" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-sm-3 col-form-label">Buisness Name</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <button class="btn btn-gradient-primary" type="button" aria-expanded="false">
+                                    <label>Add Now</label>
+                                    </button>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+        </div>
+
+        <%- include('../../../layouts/admin/footer') %>

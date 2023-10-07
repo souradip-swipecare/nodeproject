@@ -1,0 +1,190 @@
+<%- include('../../../layouts/admin/header') %>
+    <%- include('../../../layouts/admin/topbar') %>
+        <div class="container-fluid page-body-wrapper">
+            <%- include('../../../layouts/admin/sidenavbar') %>
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title"> Wallet History </h3>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <form method="post" enctype="multipart/form-data" action="opeatoradd">
+                            <h3 class="card-description"> Add operator </h3>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group row">
+                                        <div class="col-sm-18">
+                                            <input type="text" class="form-control" placeholder="Operator name" name="name" required="true"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row">
+                                        <div class="col-sm-18">
+                                            <input type="file" class="form-control" name="image" accept='image/*' required="true"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group row">
+                                            <select class="form-control" style="height: 45px;" name="type">
+                                                <option disabled selected>Select Type</option>
+                                                <option value="Prepaid">Prepaid</option>
+                                                <option value="Postpaid">Postpaid</option>
+                                                <option value="Dth">Dth</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="margin-left: 10px;">
+                                    <div class="form-group row">
+                                       
+<button class="btn btn-gradient-primary" type="submit">
+    <label>Add Now</label>
+</button>
+                                       
+                                    </div>
+                                </div>
+               
+                            </div>
+                        </form>
+
+                        <div class="row overflow-auto">
+                            <div class="col-12">
+                                <div id="order-listing_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-6">
+                                            <div class="dataTables_length" id="order-listing_length"><label>Show <select
+                                                        name="order-listing_length" aria-controls="order-listing"
+                                                        class="custom-select custom-select-sm form-control">
+                                                        <option value="5">5</option>
+                                                        <option value="10">10</option>
+                                                        <option value="15">15</option>
+                                                        <option value="-1">All</option>
+                                                    </select> entries</label></div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-6">
+                                            <div id="order-listing_filter" class="dataTables_filter"><label><input
+                                                        type="search" class="form-control" placeholder="Search"
+                                                        aria-controls="order-listing"></label></div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <table id="order-listing" class="table dataTable no-footer" cellspacing="0"
+                                                width="100%" aria-describedby="order-listing_info" style="width: 100%;">
+                                                <thead>
+                                                    <tr class="bg-primary text-white">
+                                                        <th class="sorting sorting_asc" tabindex="0"
+                                                            aria-controls="order-listing" rowspan="1" colspan="1"
+                                                            aria-sort="ascending"
+                                                            style="width: 48px;">Opimg</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="order-listing"
+                                                            rowspan="1" colspan="1"
+                                                            style="width: 61px;">ID</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="order-listing"
+                                                            rowspan="1" colspan="1"
+                                                            style="width: 58px;">Name</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="order-listing" rowspan="1" colspan="1"
+                                                          style="width: 54px;">Type</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="order-listing"
+                                                            rowspan="1" colspan="1"
+                                                            style="width: 54px;">Status</th>
+                                                        <th class="sorting" tabindex="0" aria-controls="order-listing"
+                                                            rowspan="1" colspan="1"
+                                                            style="width: 167px;">Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                
+                                                   
+                                                    <% operatordata.map((data) =>{ %>
+                                                      <tr  class="odd">
+                                                      <td class="sorting_1">
+                                                        <img src="/adminup/operator/<%= data.img %>" width="60px" height="60px">
+                                                      </td>
+                                                      <td class="sorting_1">
+                                                        <b><%= data.id %></b>
+                                                      </td>
+                                                    <td>
+                                                        <b><%= data.name %></b>
+                                                    </td>
+                                                    <td>
+                                                       <b><%= data.type %></b>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <button class="btn btn-gradient-light">
+                                                            <i class="mdi mdi-eye text-light"></i><%= data.status %></button>
+                                                    </td>
+                                                    
+                                                    <td>
+                                                        
+                                                        
+                                                            <div class="btn-gradient-light" aria-labelledby="dropdownMenuLink">
+                                                                <a class="dropdown-item" href="opedit/<%= data.name %>">Edit</a>
+                                                                <a class="dropdown-item" href="/admin/management/softDelete/<%= data._id %>">Delete</a>
+                                                            </div>
+                                                        
+                                                    </td>
+                                                      </tr>
+                                                    <% }) %>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-5">
+                                            <div class="dataTables_info" id="order-listing_info" role="status"
+                                                aria-live="polite">Showing 1 to 10 of 20
+                                                entries</div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-7">
+                                            <div class="dataTables_paginate paging_simple_numbers"
+                                                id="order-listing_paginate">
+                                                <ul class="pagination">
+                                                    <li class="paginate_button page-item previous disabled"
+                                                        id="order-listing_previous"><a href="#"
+                                                            aria-controls="order-listing" data-dt-idx="0" tabindex="0"
+                                                            class="page-link">Previous</a>
+                                                    </li>
+                                                    <li class="paginate_button page-item active"><a href="#"
+                                                            aria-controls="order-listing" data-dt-idx="1" tabindex="0"
+                                                            class="page-link">1</a></li>
+                                                    <li class="paginate_button page-item "><a href="#"
+                                                            aria-controls="order-listing" data-dt-idx="2" tabindex="0"
+                                                            class="page-link">2</a></li>
+                                                    <li class="paginate_button page-item next" id="order-listing_next">
+                                                        <a href="#" aria-controls="order-listing" data-dt-idx="3"
+                                                            tabindex="0" class="page-link">Next</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- partial:../../partials/_footer.html -->
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2023 <a
+                    href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i
+                    class="mdi mdi-heart text-danger"></i></span>
+        </div>
+    </footer>
+    <!-- partial -->
+</div>
+        </div>
+
+        <%- include('../../../layouts/admin/footer') %>

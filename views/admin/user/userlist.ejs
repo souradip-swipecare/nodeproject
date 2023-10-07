@@ -1,0 +1,75 @@
+<%- include('../../../layouts/admin/header') %>
+    <%- include('../../../layouts/admin/topbar') %>
+        <div class="container-fluid page-body-wrapper">
+            <%- include('../../../layouts/admin/sidenavbar') %>
+            <div class="main-panel">
+<div class="row">
+    <div class="col-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Recent Transactions</h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th> User </th>
+                                <th> Kyc Status </th>
+                                <th> Status </th>
+                                <th> Mobile </th>
+                                <th> Adress </th>
+                                <th> Wallet </th>
+                                <th> View </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <img src="assets/images/faces/face2.jpg" class="me-2" alt="image">
+                                    Stella Johnson
+                                </td>
+                                <td> High  </td>
+                                <td>
+                                    <label class="badge badge-gradient-warning">PROGRESS</label>
+                                </td>
+                                <td> Dec 12, 2017 </td>
+                                <td> WD-12346 </td>
+                                <td> WD-12346 </td>
+                                <td><div class="dropdown">
+                                    <button class="btn btn-gradient-primary dropdown-toggle" type="button" 
+                                        data-bs-toggle="dropdown"  aria-expanded="false">
+                                    
+                                    </button>
+                                    <div class="dropdown-menu" >
+                                        
+                                        <a class="dropdown-item" href="#">Report View</a>
+                                        <a class="dropdown-item" href="#">Profile View</a>
+                                        <a class="dropdown-item" href="#">User View</a>
+                                    </div>
+                                </div></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="assets/images/faces/face3.jpg" class="me-2" alt="image">
+                                    Marina Michel
+                                </td>
+                                <td> for one week </td>
+                                <td>
+                                    <label class="badge badge-gradient-info">ON HOLD</label>
+                                </td>
+                                <td> Dec 16, 2017 </td>
+                                <td> WD-12347 </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+        </div>
+
+        <%- include('../../../layouts/admin/footer') %>

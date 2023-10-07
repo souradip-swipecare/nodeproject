@@ -1,0 +1,201 @@
+<%- include('../../../layouts/admin/header') %>
+    <%- include('../../../layouts/admin/topbar') %>
+        <div class="container-fluid page-body-wrapper">
+            <%- include('../../../layouts/admin/sidenavbar') %>
+                <div class="main-panel">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Add Api</h4>
+                                <form class="form-sample" method="post" action="adminapisubmit">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <input type="text" class="form-control" placeholder="Enter Api Name" name="apinm" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <div class="col-sm-12">
+                                                    <input type="text" class="form-control"  placeholder="Userid" name="auserid"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <div class="col-sm-12">
+                                                    <input type="text" class="form-control" placeholder="Apitokem"name="atoken" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="Api Url" style="height: 90px;" aria-invalid="false" name="aurl" required="true"/>
+                                    </div>
+                                    
+                                    <div class="row" style="margin-top: 20px;">
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter status value</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="text" name="rstatus" required="true"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter Success Value</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="text"name="svalue" required="true" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter pending Value</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="text" name="pvalue" required="true"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter failed value</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="text" name="fvalue" required="true"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter operatorid Value</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="text"name="opvalue" required="true" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter txnid value</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="text" name="txvalue" required="true" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter Method</label>
+                                                <div class="col-sm-12">
+                                                    <select class="form-control" name="amethod"required="true">
+                                                        <option value="GET">GET</option>
+                                                        <option value="POST">POST</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter Response Type</label>
+                                                <div class="col-sm-12">
+                                                    <select class="form-control" name="rtype" required="true">
+                                                        <option value="JSON">JSON</option>
+                                                        <option value="XML">XML</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3>Callback Url Setting</h3>
+                                    <div class="row" style="margin-top: 20px;">
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter status value</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="text" name="cstvalue" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter Success Value</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="text"name="csvalue" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter pending Value</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="text"name="cpvalue" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter failed value</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="text" name="cfvalue" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group row">
+                                                <label>Enter operatorid Value</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="text" name="copid" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group row">
+                                                <label>Enter txnid value</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="text" name="ctxnid" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter Response Type</label>
+                                                <div class="col-sm-12">
+                                                    <select class="form-control" name="cfrmt">
+                                                        <option value="JSON">JSON</option>
+                                                        <option value="XML">XML</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group row">
+                                                <label>Enter Product Type</label>
+                                                <div class="col-sm-12">
+                                                    <select class="form-control" required="true" name="product">
+                                                        <option value="1">Prepaid</option>
+                                                        <option value="2">Postpaid</option>
+                                                        <option value="3">Dth</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-gradient-primary" type="submit" aria-expanded="false">
+                                        <label>Add Now</label>
+                                    </button>
+                
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+        </div>
+
+        <%- include('../../../layouts/admin/footer') %>

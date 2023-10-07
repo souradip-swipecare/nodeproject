@@ -1,0 +1,180 @@
+<%- include('../../../layouts/admin/header') %>
+    <%- include('../../../layouts/admin/topbar') %>
+        <div class="container-fluid paadmin/ge-body-wrapper">
+            <%- include('../../../layouts/admin/sidenavbar') %>
+
+                <div class="main-panel">
+                    <div class="content-wrapper">
+                        <div class="page-header">
+                            <h3 class="page-title"> Api operator code add </h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 class="card-description"> Add opcode </h3>
+                                        <br>
+                                        <div class="row" style="margin-bottom: 30px;">
+
+                                            <div class="col-md-4">
+                                                <div class="dropdown">
+                                                    <button class="btn btn-gradient-success dropdown-toggle show"
+                                                        id="servicetype" data-bs-toggle="dropdown"> Select service type
+                                                    </button>
+                                                    <div class="dropdown-menu show"
+                                                        style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 44px, 0px);">
+                                                        <a class="dropdown-item" href="adminlogin">Mobile</a>
+                                                        <a class="dropdown-item" href="#">Dth</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="row overflow-auto">
+                                            <div class="col-12">
+                                                <div id="order-listing_wrapper"
+                                                    class="dataTables_wrapper dt-bootstrap4 no-footer">
+
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <form action="">
+                                                                <table id="order-listing"
+                                                                    class="table dataTable no-footer" cellspacing="0"
+                                                                    width="100%" aria-describedby="order-listing_info"
+                                                                    style="width: 100%;">
+                                                                    <thead>
+                                                                        <tr class="bg-primary text-white">
+                                                                            <th class="sorting">Opimg</th>
+                                                                            <th class="sorting">ID</th>
+                                                                            <th class="sorting">Name</th>
+                                                                            <th class="sorting">type</th>
+                                                                            <th class="sorting">Opcode</th>
+
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr class="even">
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td>
+                                                                                <div class="col-md-7">
+                                                                                    <div class="form-group row">
+                                                                                       
+                                                                                        <div class>
+                                                                                            <select class="form-control" name="type" required="true">
+                                                                                                <option disabled>Select type</option>
+                                                                                                <option value="1">Percentage</option>
+                                                                                                <option value="2">fLAT</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="col-md-5">
+                                                                                    <div class="form-group row">
+                                                                                        <div>
+                                                                                            <input class="form-control"
+                                                                                                type="text"
+                                                                                                name="opvalue"
+                                                                                                required="true"
+                                                                                                placeholder="ENTER OP Code"
+                                                                                                max="5" />
+                                                                                        </div>
+                                                                                        <label></label>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </td>
+
+
+                                                                        </tr>
+
+                                                                        <tr class="odd">
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td valign="top" colspan="9"
+                                                                                class="dataTables_empty">No data
+                                                                                available
+                                                                                in table</td>
+                                                                        </tr>
+
+
+                                                                    </tbody>
+                                                                </table>
+                                                                <div class="col-md-3" style="margin-left: 10px;">
+                                                                    <div class="form-group row">
+
+                                                                        <button class="btn btn-gradient-primary"
+                                                                            type="submit">
+                                                                            <label>Save</label>
+                                                                        </button>
+
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="dataTables_info" id="order-listing_info"
+                                                                role="status" aria-live="polite">Showing 1 to 10 of 20
+                                                                entries</div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <div class="dataTables_paginate paging_simple_numbers"
+                                                                id="order-listing_paginate">
+                                                                <ul class="pagination">
+                                                                    <li class="paginate_button page-item previous disabled"
+                                                                        id="order-listing_previous"><a href="#"
+                                                                            aria-controls="order-listing"
+                                                                            data-dt-idx="0" tabindex="0"
+                                                                            class="page-link">Previous</a>
+                                                                    </li>
+                                                                    <li class="paginate_button page-item active"><a
+                                                                            href="#" aria-controls="order-listing"
+                                                                            data-dt-idx="1" tabindex="0"
+                                                                            class="page-link">1</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#"
+                                                                            aria-controls="order-listing"
+                                                                            data-dt-idx="2" tabindex="0"
+                                                                            class="page-link">2</a></li>
+                                                                    <li class="paginate_button page-item next"
+                                                                        id="order-listing_next">
+                                                                        <a href="#" aria-controls="order-listing"
+                                                                            data-dt-idx="3" tabindex="0"
+                                                                            class="page-link">Next</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- content-wrapper ends -->
+                    <!-- partial:../../partials/_footer.html -->
+                    <footer class="footer">
+                        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2023
+                                <a href="https://www.bootstrapdash.com/" target="_blank">BootstrapDash</a>. All rights
+                                reserved.</span>
+                            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made
+                                with <i class="mdi mdi-heart text-danger"></i></span>
+                        </div>
+                    </footer>
+                    <!-- partial -->
+                </div>
+        </div>
+
+        <%- include('../../../layouts/admin/footer') %>

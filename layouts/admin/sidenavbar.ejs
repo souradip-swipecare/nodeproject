@@ -1,0 +1,165 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item nav-profile">
+            <a href="#" class="nav-link">
+                <div class="nav-profile-image">
+                    <img src="../../../adminop/assets/images/faces/face1.jpg" alt="profile">
+                    <span class="login-status online"></span>
+                    <!--change to offline or busy as needed-->
+                </div>
+                <div class="nav-profile-text d-flex flex-column">
+                    <span class="font-weight-bold mb-2"> Name</span>
+                    <span class="text-secondary text-small">Admin</span>
+                </div>
+                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="dashboard">
+                <span class="menu-title">Dashboard</span>
+                <i class="mdi mdi-home menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#apiuser" aria-expanded="false"
+                aria-controls="ui-basic">
+                <span class="menu-title">Api User</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+            </a>
+            <div class="collapse" id="apiuser">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="/admin/userlist">User List</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="/admin/useradd">Add User</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#apiset" aria-expanded="false"
+                aria-controls="general-pages">
+                <span class="menu-title">Api Setting</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+            </a>
+            <div class="collapse" id="apiset">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="/admin/apiadd"> Add Api </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="/admin/apilist"> Api list </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="/admin/apiopadd"> Api Commision </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#scheme" aria-expanded="false"
+                aria-controls="general-pages">
+                <span class="menu-title">Scheme Manager</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+            </a>
+            <div class="collapse" id="scheme">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="addsheme"> Add Scheme </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="addcommision"> Add Commision </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="addadmincommision"> Add Admin
+                            Commision</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/admin/apilog">
+                <span class="menu-title">Api Logs</span>
+                <i class="mdi mdi-contacts menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#oprt" aria-expanded="false" aria-controls="general-pages">
+                <span class="menu-title">Operators</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+            </a>
+            <div class="collapse" id="oprt">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="opeatoradd"> Operator Add </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="showperator"> Operator List </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="showperator"> Amount Wise </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="showperator"> Operator switching </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#histry" aria-expanded="false"
+                aria-controls="general-pages">
+                <span class="menu-title">History</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+            </a>
+            <div class="collapse" id="histry">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Mobile </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Dth </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Wallet</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="pages/charts/chartjs.html">
+                <span class="menu-title">Payment Settings</span>
+                <i class="mdi mdi-chart-bar menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="pages/tables/basic-table.html">
+                <span class="menu-title">Complaints</span>
+                <i class="mdi mdi-table-large menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#dailyreprt" aria-expanded="false"
+                aria-controls="general-pages">
+                <span class="menu-title">Daily Report</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-medical-bag menu-icon"></i>
+            </a>
+            <div class="collapse" id="dailyreprt">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Sales Report
+                        </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Commision Report </a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Profit Report </a>
+                    </li>
+
+                </ul>
+            </div>
+        </li>
+        <!-- <li class="nav-item sidebar-actions">
+              <span class="nav-link">
+                <div class="border-bottom">
+                  <h6 class="font-weight-normal mb-3">Projects</h6>
+                </div>
+                <button class="btn btn-block btn-lg btn-gradient-primary mt-4">+ Add a project</button>
+                <div class="mt-4">
+                  <div class="border-bottom">
+                    <p class="text-secondary">Categories</p>
+                  </div>
+                  <ul class="gradient-bullet-list mt-4">
+                    <li>Free</li>
+                    <li>Pro</li>
+                  </ul>
+                </div>
+              </span>
+            </li> -->
+    </ul>
+</nav>
