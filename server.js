@@ -25,6 +25,7 @@ app.use(adminrout);
 
 
 
+require(path.join(__dirname, '/config', 'datab'))();
 
 
 const port = process.env.PORT;
