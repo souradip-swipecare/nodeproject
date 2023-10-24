@@ -24,6 +24,13 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:3030'); // Replace with your frontend's URL
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 
 //router part add
 const userrout = require("./route/userrouter");
