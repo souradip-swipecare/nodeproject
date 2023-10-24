@@ -7,7 +7,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Add Api</h4>
-                                <form class="form-sample" method="post" action="adminapisubmit">
+                                <form class="form-sample" method="post" action="/admin/apiadad">
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
@@ -88,6 +88,14 @@
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group row">
+                                                <label>Enter Error value</label>
+                                                <div class="col-sm-12">
+                                                    <input class="form-control" type="text" name="ervalue" required="true" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
                                                 <label>Enter Method</label>
                                                 <div class="col-sm-12">
                                                     <select class="form-control" name="amethod"required="true">
@@ -104,6 +112,17 @@
                                                     <select class="form-control" name="rtype" required="true">
                                                         <option value="JSON">JSON</option>
                                                         <option value="XML">XML</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group row">
+                                                <label>Enter Product</label>
+                                                <div class="col-sm-12">
+                                                    <select class="form-control" name="product" required="true">
+                                                        <option value="1">PREPAID</option>
+                                                        <option value="2">DTH</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -173,18 +192,15 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-3">
                                             <div class="form-group row">
-                                                <label>Enter Product Type</label>
+                                                <label>Enter Error value</label>
                                                 <div class="col-sm-12">
-                                                    <select class="form-control" required="true" name="product">
-                                                        <option value="1">Prepaid</option>
-                                                        <option value="2">Postpaid</option>
-                                                        <option value="3">Dth</option>
-                                                    </select>
+                                                    <input class="form-control" type="text" name="cervalue" required="true" />
                                                 </div>
                                             </div>
                                         </div>
+                                        
                                     </div>
                                     <button class="btn btn-gradient-primary" type="submit" aria-expanded="false">
                                         <label>Add Now</label>

@@ -9,12 +9,22 @@
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left p-5">
                             <div class="brand-logo">
-                                <img src="../../../adminop/images/logo.svg">
+                                <img src="../../../adminop/assets/images/logo.svg">
                             </div>
                             <h4>Hello! let's get started</h4>
-                          
+                            <% if(success.length) {%>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <strong>Hey</strong> Logged In Successfully
+                                    
+                                </div>
+                                <% } else if(error.length) {%>
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        <strong>Hey</strong> <%= error %>
+                                        
+                                    </div>
+                                    <% } %>
 
-                                        <form class="pt-3" method="post" action="/alogin">
+                                        <form class="pt-3" method="post" action="/admin/adminlogin/dashboard">
                                             <div class="form-group">
                                                 <input type="number" class="form-control form-control-lg"
                                                     id="exampleInputEmail1" placeholder="mobile" name="mobile">

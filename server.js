@@ -1,12 +1,29 @@
 const express = require('express');
 // const expresslayout = require('express-ejs-layouts');
 const path = require('path');
+_ = require('underscore');
+const bodyParser = require('body-parser');
+const cookieParser = require("cookie-parser");
+const flash = require('connect-flash');;
 require('dotenv').config();
 const app = express();
 app.use(express.static(path.join(__dirname, '/public')));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
-
+//body parsher 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+app.use(flash());
+app.use(cookieParser());
+const session = require('express-session');
+app.use(session({
+    secret: 'SOURADIPBBAYHDMN',
+    cookie: { maxAge: 60000 },
+    resave: false,
+    saveUninitialized: false
+}));
 
 //router part add
 const userrout = require("./route/userrouter");

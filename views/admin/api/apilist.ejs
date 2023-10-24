@@ -2,82 +2,177 @@
     <%- include('../../../layouts/admin/topbar') %>
         <div class="container-fluid page-body-wrapper">
             <%- include('../../../layouts/admin/sidenavbar') %>
+
                 <div class="main-panel">
-                    <div class="row">
-                        <div class="col-12 grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row">
-                                     <div class="col-md-8">
+                    <div class="content-wrapper">
+                        <div class="page-header">
+                            <h3 class="page-title"> Api List  </h3>
+                        </div>
 
-                                     </div>
-                                     <div class="col-md-4">
-                                       <a class="btn btn-gradient-primary" href="adminapiadd">Add api</a>
-                                     </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row overflow-auto">
+                                            <div class="col-12">
+                                                <div id="order-listing_wrapper"
+                                                    class="dataTables_wrapper dt-bootstrap4 no-footer">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-4">
+                                                            <div class="dataTables_length" id="order-listing_length">
+                                                                <label> <select name="order-listing_length"
+                                                                        aria-controls="order-listing"
+                                                                        class="custom-select custom-select-sm form-control">
+                                                                        <option value="5">5</option>
+                                                                        <option value="10">10</option>
+                                                                        <option value="15">15</option>
+                                                                        <option value="-1">All</option>
+                                                                    </select> </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-4">
+                                                            <div id="order-listing_filter" class="dataTables_filter">
+                                                                <label><input type="search" class="form-control"
+                                                                        placeholder="Search"
+                                                                        aria-controls="order-listing"></label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-4">
+                                                            <label></label>
+                                                            <button type="button" class="btn btn-primary"
+                                                                >
+                                                                Add Api
+                                                            </button>
+                                                        </div>
 
+
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <table id="order-listing" class="table dataTable no-footer"
+                                                                cellspacing="0" width="100%"
+                                                                aria-describedby="order-listing_info"
+                                                                style="width: 100%;">
+                                                                <thead>
+                                                                    <tr class="bg-primary text-white">
+                                                                        <th class="sorting sorting_asc" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1" aria-sort="ascending"
+                                                                            style="width: 48px;">Opimg</th>
+                                                                        <th class="sorting" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1" style="width: 61px;">ID</th>
+                                                                        <th class="sorting" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1" style="width: 58px;">Name</th>
+                                                                        <th class="sorting" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1" style="width: 54px;">Type</th>
+                                                                        <th class="sorting" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1" style="width: 54px;">Status</th>
+                                                                        <th class="sorting" tabindex="0"
+                                                                            aria-controls="order-listing" rowspan="1"
+                                                                            colspan="1" style="width: 167px;">Actions
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+
+
+                                                                    <tr class="odd">
+                                                                        <td class="sorting_1">
+                                                                            <img src="/adminup/operator/" width="60px"
+                                                                                height="60px">
+                                                                        </td>
+                                                                        <td class="sorting_1">
+                                                                            <b> data.id</b>
+                                                                        </td>
+                                                                        <td>
+                                                                            <b> data.name</b>
+                                                                        </td>
+                                                                        <td>
+                                                                            <b> da</b>
+                                                                        </td>
+                                                                        <td class="text-right">
+                                                                            <button class="btn btn-gradient-light">
+                                                                                <i
+                                                                                    class="mdi mdi-eye text-light"></i>ata</button>
+                                                                        </td>
+
+                                                                        <td>
+
+
+                                                                            <div class="btn-gradient-light"
+                                                                                aria-labelledby="dropdownMenuLink">
+                                                                                <a class="dropdown-item"
+                                                                                    href="opedit/">Edit</a>
+                                                                                <a class="dropdown-item"
+                                                                                    href="/admin/management/softDelete/">Delete</a>
+                                                                            </div>
+
+                                                                        </td>
+                                                                    </tr>
+
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-5">
+                                                            <div class="dataTables_info" id="order-listing_info"
+                                                                role="status" aria-live="polite">Showing 1 to 10 of 20
+                                                                entries</div>
+                                                        </div>
+                                                        <div class="col-sm-12 col-md-7">
+                                                            <div class="dataTables_paginate paging_simple_numbers"
+                                                                id="order-listing_paginate">
+                                                                <ul class="pagination">
+                                                                    <li class="paginate_button page-item previous disabled"
+                                                                        id="order-listing_previous"><a href="#"
+                                                                            aria-controls="order-listing"
+                                                                            data-dt-idx="0" tabindex="0"
+                                                                            class="page-link">Previous</a>
+                                                                    </li>
+                                                                    <li class="paginate_button page-item active"><a
+                                                                            href="#" aria-controls="order-listing"
+                                                                            data-dt-idx="1" tabindex="0"
+                                                                            class="page-link">1</a></li>
+                                                                    <li class="paginate_button page-item "><a href="#"
+                                                                            aria-controls="order-listing"
+                                                                            data-dt-idx="2" tabindex="0"
+                                                                            class="page-link">2</a></li>
+                                                                    <li class="paginate_button page-item next"
+                                                                        id="order-listing_next">
+                                                                        <a href="#" aria-controls="order-listing"
+                                                                            data-dt-idx="3" tabindex="0"
+                                                                            class="page-link">Next</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h4 class="card-title">Api List</h4>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th> Api id </th>
-                                                    <th> Api Name </th>
-                                                    <th> Url </th>
-                                                    <th> Api Balnce </th>
-                                                    <th> Status </th>
-                                                    <th> View </th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-
-<tr>
-
-    <td> <b> data </b></td>
-    
-    <td>  data </td>
-
-<td>
-    <label class="badge badge-gradient-warning"><a>Balance</a></label>
-</td>
-    <td> <button class="btn btn-gradient-primary" type="button"> data.</button> </td>
-    <td>
-        <div class="dropdown">
-            <button class="btn btn-gradient-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-
-            </button>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" href="api/apimopcode/=data._id%>/mobile">Mobile</a>
-                <a class="dropdown-item" href="api/apidopcode/%=data._id%/dth">Dth</a>
-                <a class="dropdown-item" href="#">Edit</a>
-
-            </div>
-        </div>
-    </td>
-</tr>
-                                    
-                                                
-                                               
-
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    <!-- content-wrapper ends -->
+                    <!-- partial:../../partials/_footer.html -->
+                    
+                    <!-- partial -->
                 </div>
-        </div>
-        <script>
-            $(document).ready(function () {
-                    // Open the modal when the document is ready
-                    $('#myModal').modal('show');
-                });
-        </script>
+                <!-- Button trigger modal -->
 
+
+          
+
+        </div>
+  
 
         <%- include('../../../layouts/admin/footer') %>

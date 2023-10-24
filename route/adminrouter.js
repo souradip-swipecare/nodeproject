@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const login = require('../contollers/admin/logincontroller');
+const api = require('../contollers/admin/Api/Api');
 
-router.get('/admin/adminlogin',login.adminlogin);
+router.get('/admin/adminlogin',login.adminloginget);
+router.post('/admin/adminlogin/dashboard', login.adminlogin);
+router.post('/admin/apiadad', api.apiadd);
 router.get('/admin/dashboard', login.dashboard);
 router.get('/admin/apiadd', login.apiadd);
 router.get('/admin/apilist', login.apilist);
